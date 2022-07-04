@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../data/data.dart';
+import '../widgets/recent_orders.dart';
 
 class HomeScreen extends StatefulWidget {
   HomeScreen({Key? key}) : super(key: key);
@@ -34,7 +35,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ],
       ),
       body: ListView(
-        children: [
+        children: <Widget>[
           Padding(
             padding: EdgeInsets.all(20.0),
             child: TextField(
@@ -63,7 +64,8 @@ class _HomeScreenState extends State<HomeScreen> {
                     onPressed: () {},
                   )),
             ),
-          )
+          ),
+          RecentOrders(),
         ],
       ),
     );
