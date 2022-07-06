@@ -4,6 +4,7 @@ import '../data/data.dart';
 import '../models/restaurant.dart';
 import '../widgets/rating_stars.dart';
 import '../widgets/recent_orders.dart';
+import 'cart_screen.dart';
 import 'restaurant_screen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -109,7 +110,12 @@ class _HomeScreenState extends State<HomeScreen> {
             style: TextButton.styleFrom(
               primary: Colors.white,
             ),
-            onPressed: () {},
+            onPressed: () => Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (_) => CartScreen(),
+              ),
+            ),
           ),
         ],
       ),
